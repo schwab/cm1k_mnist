@@ -56,6 +56,7 @@ class compression_templates:
             testSet.append({"x":vector,'y':testBin,'bStr':"{0:b}".format(testBin)})
         #print testSet
         return testSet
+
     def testCompression(self,input,bl):
         perfectMatches=0
         totalError=0
@@ -81,6 +82,23 @@ class compression_templates:
                 #print data
             data = data << 1
         return data
+
+    def expandOneByteToPixels(self,indata):
+        data = [0,0,0,0,0,0,0,0]
+        mask = 1
+        for x in range(0,7):
+            if indata[x] & mask == 1:
+                data[x] = 1
+        return data
+    
+    # expand a compressed byte array (to b/w image data)
+    def expandBytesToPixels(self,data):
+        out = []
+        for b in data:
+            out + self.expandOneByteToPixels(b)
+        return out
+
+
     def compressCpuBatch(self,inset):
         data = []
         for item in inset:
