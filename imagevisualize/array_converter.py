@@ -5,8 +5,11 @@ import random
 from PIL import Image
 
 class converter:
+    base_folder=''
+    def __init__(self,folder='image/'):
+        self.base_folder=folder
     def save_image(self,data,filename):
-        plt.imsave('image/' + filename,data.reshape(28,28),cmap=cm.gray)
+        plt.imsave(this.base_folder + filename,data.reshape(28,28),cmap=cm.gray)
 
     def randomArray(self,alen):
         aset = np.zeros(alen)

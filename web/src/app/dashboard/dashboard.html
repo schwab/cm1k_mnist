@@ -1,0 +1,27 @@
+<h1 class="page-title">CM1K <small><small>Learning MNIST results</small></small></h1>
+
+<div class="row">
+  <div class="col-md-6">
+    <section widget class="widget">
+      <header>
+        <h4>
+          <span class="fw-semi-bold">MNIST</span> Training Runs 
+        </h4>
+        <div class="widget-controls">
+          <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+          <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+          <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+        </div>
+      </header>
+      <div class="widget-body">
+        <img class="pull-left mr-sm" src="assets/images/cognimem-cm1k.jpg" alt="Angular 2.0" width="100">
+        <p class="lead">Data explorer for cm1k training on  <strong>MNIST <em>data</em></strong></p>
+        <div class="mr-sm " *ngFor="let x of data">
+          <p><li>{{x.name}}</li></p><p>{{x.description}}</p>
+        </div>
+
+        <!--<p class="fs-mini">Made by <a href="http://flatlogic.com" target="_blank">Flatlogic</a>.</p>-->
+      </div>
+    </section>
+  </div>
+</div>
