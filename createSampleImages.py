@@ -28,7 +28,7 @@ class create_samples:
         print "saved", count,"images to", self.image_dir
         
 if __name__ =="__main__":
-    cs = create_samples("web/src/assets/images")
+    cs = create_samples("")
     cs.verifyData(10)
     cs.generateSampleImages(10)
 
