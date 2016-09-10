@@ -23,7 +23,7 @@ class create_samples:
         ct = compression_templates()
         for x in range(0,count):
             expanded = ct.expandBytesToPixels(self.bl.trvecRed[x])
-            c.save_image(expanded,os.path.combine(self.image_dir,"expand_" + str(self.bl.train_lables[x])))
+            c.save_image(expanded,os.path.join(self.image_dir,"expand_" + str(self.bl.train_lables[x])))
         print "saved", count,"images to", self.image_dir
         
 if __name__ =="__main__":
