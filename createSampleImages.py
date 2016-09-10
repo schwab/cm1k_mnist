@@ -26,7 +26,7 @@ class create_samples:
             c.save_image(expanded,os.path.combine(self.image_dir,"expand_" + str(self.bl.train_lables[x])))
         print "saved", count,"images to",
         
-if __main__ =="__main__":
+if __name__ =="__main__":
     cs = create_samples("web/src/assets/images")
     cs.generateSampleImages(10)
 
