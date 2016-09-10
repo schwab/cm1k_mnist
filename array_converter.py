@@ -9,7 +9,7 @@ class converter:
     def __init__(self,folder='image/'):
         self.base_folder=folder
     def save_image(self,data,filename):
-        plt.imsave(self.base_folder + filename,data.reshape(28,28),cmap=cm.gray)
+        plt.imsave(self.base_folder + filename,np.asarray(data).reshape(28,28),cmap=cm.gray)
 
     def randomArray(self,alen):
         aset = np.zeros(alen)
