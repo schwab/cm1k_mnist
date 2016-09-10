@@ -89,14 +89,16 @@ class compression_templates:
         for x in range(0,7):
             if indata & mask == 1:
                 data[7-x] = 255
+                
                 indata = indata >> 1
+        print 'expandOneByte',data
         return data
     
     # expand a compressed byte array (to b/w image data)
     def expandBytesToPixels(self,data):
         out = []
         for b in data:
-            out + self.expandOneByteToPixels(b)
+            out = out + self.expandOneByteToPixels(b)
         return out
 
 
