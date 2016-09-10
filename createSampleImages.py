@@ -14,8 +14,8 @@ class create_samples:
         if not self.bl.trvecRed or len(self.bl.trvecRed) < 1:
             if  not self.bl.trvec or len(self.bl.trvec) < 1:
                 print 'loading mnist training data'
-                bl.loadMnist()
-            bl.compressAllTrvec()
+                self.bl.loadMnist()
+            self.bl.compressAllTrvec()
     
     # creates a sample of full and compressed images
     def generateSampleImages(self,count):
