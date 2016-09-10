@@ -28,6 +28,7 @@ class create_samples:
         
 if __name__ =="__main__":
     cs = create_samples("web/src/assets/images")
+    cs.verifyData()
     cs.generateSampleImages(10)
 
     
