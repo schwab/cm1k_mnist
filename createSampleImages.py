@@ -12,7 +12,7 @@ class create_samples:
     # verify the mnist data is loaded and the images have been compressed
     def verifyData(self):
         if not self.bl.trvecRed or len(self.bl.trvecRed) < 1:
-            if  not self.bl.trvec and len(self.bl.trvec) < 1:
+            if  not self.bl.trvec or len(self.bl.trvec) < 1:
                 print 'loading mnist training data'
                 bl.loadMnist()
             bl.compressAllTrvec()
