@@ -63,7 +63,7 @@ class brain_learn:
     def compressTrvecRange(self,cnt):
         ic = image_converter()
         self.trvecRed=[]
-        for x` in range(0,cnt):
+        for x in range(0,cnt):
             r =ic.downsample(self.trvec[x])
             self.trvecRed.append(r)
             print "converted ", len(self.trvecRed), 'images'   
