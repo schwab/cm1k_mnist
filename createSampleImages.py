@@ -6,7 +6,7 @@ class create_samples:
     bl = None
     image_dir = 'images/'
     def __init__(self,imagedir = 'images/'):
-        bl = brain_learn()
+        self.bl = brain_learn()
         self.image_dir = imagedir
 
     # verify the mnist data is loaded and the images have been compressed
