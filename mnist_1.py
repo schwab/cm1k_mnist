@@ -60,7 +60,13 @@ class brain_learn:
             r =ic.downsample(img)
             self.trvecRed.append(r)
             print "converted ", len(self.trvecRed), 'images'
-    
+    def compressTrvecRange(self,cnt):
+        ic = image_converter()
+        self.trvecRed=[]
+        for img in range(0,cnt):
+            r =ic.downsample(img)
+            self.trvecRed.append(r)
+            print "converted ", len(self.trvecRed), 'images'   
     def recognizeReport(self,idx):
         r1,r2=self.recVec(self.trvecRed[idx])
         print "expected cat",self.train_labels[idx]
