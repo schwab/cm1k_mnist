@@ -66,7 +66,8 @@ class brain_learn:
         for x in range(0,cnt):
             r =ic.downsample(self.trvec[x])
             self.trvecRed.append(r)
-            print "converted ", len(self.trvecRed), 'images'   
+        print "converted ", len(self.trvecRed), 'images'  
+        print self.trvecRed 
     def recognizeReport(self,idx):
         r1,r2=self.recVec(self.trvecRed[idx])
         print "expected cat",self.train_labels[idx]
