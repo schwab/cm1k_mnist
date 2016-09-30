@@ -22,7 +22,7 @@ class create_samples:
         c = converter(self.image_dir)
         ct = compression_templates()
         for x in range(0,count):
-            print "trvecRed[x] 0:30", self.bl.trvecRed[x][0:30])
+            print "trvecRed[x] 0:30", self.bl.trvecRed[x][0:30]
             expanded = ct.expandBytesToPixels(self.bl.trvecRed[x])
             print "Expanded array size", len(expanded), expanded
             c.save_image(expanded,os.path.join(self.image_dir,"expand_" + str(self.bl.train_labels[x])))
