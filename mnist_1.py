@@ -65,6 +65,7 @@ class brain_learn:
         self.trvecRed=[]
         for x in range(0,cnt):
             r =ic.downsample(self.trvec[x])
+            print "downsample start : ",r[0:30]
             self.trvecRed.append(r)
         print "converted ", len(self.trvecRed), 'images'  
         print self.trvecRed 
