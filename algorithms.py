@@ -89,11 +89,12 @@ class compression_templates:
         '''
         data = [0,0,0,0,0,0,0,0]
         mask = 1
-        for x in range(0,7):
+        for x in range(0,8):
+            #print indata, mask, indata & mask
             if indata & mask == 1:
                 data[7-x] = 255
                 
-                indata = indata >> 1
+            indata = indata >> 1
         #print 'expandOneByte',data
         return data
     
