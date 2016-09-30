@@ -97,7 +97,7 @@ class compression_templates:
     # expand a compressed byte array (to b/w image data)
     def expandBytesToPixels(self,data):
         out = []
-        for b in data:
+        for b in range(0,len(data)):
             out = out + self.expandOneByteToPixels(b)
         return out
 
