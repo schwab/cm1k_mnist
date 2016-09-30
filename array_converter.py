@@ -8,6 +8,7 @@ class converter:
     base_folder=''
     def __init__(self,folder='image/'):
         self.base_folder=folder
+        
     def save_image(self,data,filename):
         plt.imsave( filename,np.asarray(data).reshape(28,28),cmap=cm.gray)
 

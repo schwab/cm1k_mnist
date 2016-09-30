@@ -84,6 +84,9 @@ class compression_templates:
         return data
 
     def expandOneByteToPixels(self,indata):
+        '''
+            Expand a single by of the one pixel array.
+        '''
         data = [0,0,0,0,0,0,0,0]
         mask = 1
         for x in range(0,7):
@@ -91,7 +94,7 @@ class compression_templates:
                 data[7-x] = 255
                 
                 indata = indata >> 1
-        print 'expandOneByte',data
+        #print 'expandOneByte',data
         return data
     
     # expand a compressed byte array (to b/w image data)
